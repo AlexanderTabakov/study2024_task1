@@ -1,10 +1,9 @@
-import React from 'react';
-
+import React from "react";
 
 export function App() {
-    return (
-        <>
-            <div>WORK</div>
-        </>
-    );
+  return (
+    <>
+      <div>WORK</div>
+    </>
+  );
 }
