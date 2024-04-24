@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Auth from "components/Auth";
 
 const Container = styled.header`
   position: sticky;
@@ -31,7 +32,10 @@ const Header = () => {
           <nav>Contacts</nav>
         </NavBar>
 
+
+
         <LoginAndSignUp>
+          <Auth/>
           <button>Login</button>
           <button>Sign up</button>
         </LoginAndSignUp>

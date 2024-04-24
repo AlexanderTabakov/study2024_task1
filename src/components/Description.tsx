@@ -1,24 +1,45 @@
 import React from "react";
 import styled from "styled-components";
-import star from './assets/star.svg'
+import Star from "../assets/star.svg";
+import Logo from '../assets/trustpilot.svg'
+import Image from '../assets/Hero.svg'
 
 
-const Container = styled.div`
+
+
+const Container = styled.section`
   display: flex;
+  flex-direction: row;
 `;
 
 const LeftContainer = styled.div`
   width: 568px;
   height: 492px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  .logoAndRating {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
   .rating {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    gap: 3px;
   }
 `;
 
+const RightContainer = styled.div`
+ .image {
+   position: relative;
+ }
+`
+
 const Description = () => {
   return (
-    <div>
+    <Container>
       <LeftContainer>
         <p> ---------- OVER 1000 USERS </p>
         <h1>
@@ -33,21 +54,27 @@ const Description = () => {
           <button>Get Started</button>
           <button>Go Pro</button>
         </div>
-        <div>
-          <img src="/src/assets/trustpilot.svg" alt="trustpilot" />
+        <div className={'logoAndRating'}>
+          <Logo/>
           <div className={"rating"}>
-            <img src={star} alt="" />
-            {/*<img src={"/src/assets/star.svg"} alt="" />*/}
-            <img src="/src/assets/star.svg.png" alt="star" />
-            <img src="/src/assets/star.svg" alt="star" />
-            <img src="/src/assets/star.svg" alt="star" />
-            <img src="/src/assets/star.svg" alt="star" />
-            <img src="/src/assets/star.svg" alt="star" />
+            <Star/>
+            <Star/>
+            <Star/>
+            <Star/>
+            <Star/>
             <span>4900+</span>
           </div>
         </div>
       </LeftContainer>
-    </div>
+
+      <RightContainer>
+
+        <Image/>
+
+      </RightContainer>
+    </Container>
+
+
   );
 };
 
