@@ -32,10 +32,8 @@ const Header = () => {
           <nav>Contacts</nav>
         </NavBar>
 
-
-
         <LoginAndSignUp>
-          <Auth/>
+          <Auth />
         </LoginAndSignUp>
       </Container>
     </header>

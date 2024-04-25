@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { FaRegHeart } from "react-icons/fa";
 import { TiStarFullOutline } from "react-icons/ti";
+import { IRestCardProps } from "ui/RestaurantCard";
 
-interface IDishCardProps {
-  src?: string;
+interface IDishCardProps extends IRestCardProps {
+  price: number;
 }
 
 const Container = styled.div`
@@ -12,7 +13,6 @@ const Container = styled.div`
   justify-content: space-around;
   height: 390px;
   width: 225px;
-  border: darkblue solid;
   border-radius: 54px;
   flex-direction: column;
   padding: 20px;
@@ -22,7 +22,6 @@ const Container = styled.div`
     width: 185px;
     height: 185px;
     border-radius: 50%;
-    border: salmon solid;
     margin-left: auto;
     margin-right: auto;
   }
@@ -72,33 +71,51 @@ const PriceAndAddToCard = styled.div`
   }
 `;
 
-const DishCard: React.FC<IDishCardProps> = ({ src }) => {
+const DishCard: React.FC<IDishCardProps> = ({
+  image,
+  price,
+  rating,
+  markedBy,
+  name,
+  time,
+}) => {
+  const [color, setColor] = useState("green");
+
+  const handleColor = (dish: any) => {
+    if (markedBy === "Healthy") {
+      return "yellow";
+    }
+
+    if (markedBy === "Trending") {
+      return "red";
+    }
+    return "green";
+  };
+
   return (
-    <div>
-      <Container>
-        <FaRegHeart className={"heartIcon"} />
+    <Container>
+      <FaRegHeart className={"heartIcon"} />
 
-        <img src={src} alt="Image" />
+      <img src={image} alt="Image" />
 
-        <Description>
-          <div className={"textAndRating"}>
-            <div className={"markedBy"}>Healthy</div>
-            <p>Chiken Hell</p>
-          </div>
-          <div className={"rating"}>
-            {" "}
-            <p>24 min</p> <TiStarFullOutline /> <p>4.8</p>{" "}
-          </div>
-        </Description>
+      <Description>
+        <div className={"textAndRating"}>
+          <div className={handleColor(markedBy)}>{markedBy}</div>
+          <p>{name}</p>
+        </div>
+        <div className={"rating"}>
+          {" "}
+          <p>{time} min</p> <TiStarFullOutline /> <p>{rating}</p>{" "}
+        </div>
+      </Description>
 
-        <PriceAndAddToCard>
-          <div>
-            <span>$</span> <span>12.99</span>{" "}
-          </div>
-          <button>+</button>
-        </PriceAndAddToCard>
-      </Container>
-    </div>
+      <PriceAndAddToCard>
+        <div>
+          <span>$</span> <span>{price}</span>{" "}
+        </div>
+        <button>+</button>
+      </PriceAndAddToCard>
+    </Container>
   );
 };
 

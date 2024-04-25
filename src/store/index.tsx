@@ -5,18 +5,18 @@ import axios from "axios";
 export interface IState {
   data: [];
   posts: [];
-  restaraunts:[],
+  restaraunts: [];
   loading: boolean;
   hasErrors: boolean;
   getData?: any;
   getPosts?: any;
-  getRestaraunts?:any,
+  getRestaraunts?: any;
 }
 
 const initialState: IState = {
   data: [],
   posts: [],
-  restaraunts:[],
+  restaraunts: [],
   loading: false,
   hasErrors: false,
 };
@@ -25,7 +25,7 @@ const useStore = create(
   devtools<IState>((set) => ({
     data: [],
     posts: [],
-    restaraunts:[],
+    restaraunts: [],
     loading: false,
     hasErrors: false,
 
@@ -65,7 +65,7 @@ const useStore = create(
       set(() => ({ loading: true }));
       try {
         const response = await axios.get(
-            "https://662a24ed67df268010a2c461.mockapi.io/restaraunts",
+          "https://662a24ed67df268010a2c461.mockapi.io/restaraunts",
         );
 
         set((state: IState) => ({
@@ -81,6 +81,6 @@ const useStore = create(
 
 useStore.getState().getData();
 useStore.getState().getPosts();
-useStore.getState().getRestaraunts()
+useStore.getState().getRestaraunts();
 
 export default useStore;

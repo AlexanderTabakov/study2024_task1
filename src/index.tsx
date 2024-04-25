@@ -1,5 +1,4 @@
 import React from "react";
-import global from "app/global";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import MainPage from "pages/MainPage";

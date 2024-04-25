@@ -1,11 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Star from "../assets/star.svg";
-import Logo from '../assets/trustpilot.svg'
-import Image from '../assets/Hero.svg'
-
-
-
+import Logo from "../assets/trustpilot.svg";
+import Image from "../assets/Hero.svg";
 
 const Container = styled.section`
   display: flex;
@@ -32,10 +29,10 @@ const LeftContainer = styled.div`
 `;
 
 const RightContainer = styled.div`
- .image {
-   position: relative;
- }
-`
+  .image {
+    position: relative;
+  }
+`;
 
 const Description = () => {
   return (
@@ -54,27 +51,23 @@ const Description = () => {
           <button>Get Started</button>
           <button>Go Pro</button>
         </div>
-        <div className={'logoAndRating'}>
-          <Logo/>
+        <div className={"logoAndRating"}>
+          <Logo />
           <div className={"rating"}>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+            <Star />
             <span>4900+</span>
           </div>
         </div>
       </LeftContainer>
 
       <RightContainer>
-
-        <Image/>
-
+        <Image />
       </RightContainer>
     </Container>
-
-
   );
 };
 
