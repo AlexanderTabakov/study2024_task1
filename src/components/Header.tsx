@@ -36,8 +36,6 @@ const Header = () => {
 
         <LoginAndSignUp>
           <Auth/>
-          <button>Login</button>
-          <button>Sign up</button>
         </LoginAndSignUp>
       </Container>
     </header>
