@@ -7,6 +7,10 @@ import MobileApp from "components/MobileApp";
 import TopRestaurantsLayout from "components/TopRestaurantsLayout";
 import DishesLayout from "components/DishesLayout";
 import CarouselOfCustomersSay from "components/Carousel";
+import DishTag from "ui/DishTag";
+import ControlPurchasesLayout from "components/ControlPurchasesLayout";
+import CustomersSaysTab from "ui/CustomersSaysTab";
+import Sale from "components/Sale";
 
 const MainLayout = () => {
   const { getData, loading, hasErrors } = useStore();
@@ -21,13 +25,24 @@ const MainLayout = () => {
 
   return (
     <>
-      {/*// <DishCard/>*/}
+
+
+      <ControlPurchasesLayout/>
+
       <Description />
       <Features />
       <MobileApp />
       <TopRestaurantsLayout />
       <DishesLayout />
       <CarouselOfCustomersSay />
+        <Sale/>
+
+
+
+
+
+
+
     </>
   );
 };

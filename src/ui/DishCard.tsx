@@ -17,6 +17,13 @@ const Container = styled.div`
   flex-direction: column;
   padding: 20px;
   position: relative;
+  box-shadow: 0 20px 30px rgba(70, 70, 70, 0.1);
+
+
+  &:hover {
+    transform: scale(110%);
+    transition: transform 0.3s ease;
+  }
 
   img {
     width: 185px;

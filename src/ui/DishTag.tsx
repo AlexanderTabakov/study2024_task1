@@ -1,29 +1,59 @@
 import React from "react";
-import { Card, Space } from "antd";
+import styled from "styled-components";
 
-const DishTag: React.FC = () => {
+
+interface IDishTagProps {
+  image?:string,
+  dishName?:string,
+  delivery?:string,
+  time?:string
+}
+
+
+const Container = styled.div`
+
+    display: flex;
+    flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width:345px;
+  height:88px;
+  border: blue solid;
+  border-radius: 7px;
+  box-shadow: 0 20px 30px rgba(70, 70, 70, 0.1);
+  &:hover {
+    transform: scale(110%);
+    transition: transform 0.3s ease;
+  }
+  
+  
+  
+  .img {
+    width: 60px;
+  }
+  
+  .time {
+    display: flex;
+    
+  }
+`
+
+const DishTag: React.FC<IDishTagProps> = ({image, delivery, time, dishName}) => {
   return (
-    <Space direction="vertical" size={16}>
-      <Card
-        title="Default size card"
-        extra={<a href="#">More</a>}
-        style={{ width: 300 }}
-      >
-        <p>Card content</p>
-        <p>Card content</p>
-        <p>Card content</p>
-      </Card>
-      <Card
-        size="small"
-        title="Small size card"
-        extra={<a href="#">More</a>}
-        style={{ width: 300 }}
-      >
-        <p>Card content</p>
-        <p>Card content</p>
-        <p>Card content</p>
-      </Card>
-    </Space>
+
+      <Container>
+
+        <div>
+          <img className={'img'} src={image} alt="tag"/>
+        </div>
+        <div>
+          <h3>{dishName}</h3>
+            <div>{delivery}</div>
+        </div>
+        <div className={'time'}> <p>{time}</p></div>
+
+
+      </Container>
   );
 };
 

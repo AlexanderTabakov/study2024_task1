@@ -1,14 +1,32 @@
 import React from "react";
 import { Carousel } from "antd";
+import CustomersSaysTab from "ui/CustomersSaysTab";
+import styled from "styled-components";
+
 
 const contentStyle: React.CSSProperties = {
   margin: 0,
-  height: "160px",
-  color: "#fff",
-  lineHeight: "160px",
-  textAlign: "center",
-  background: "#364d79",
+  height: "fit-content",
+  background: "#eae5e5",
 };
+
+const Container = styled.div`
+    
+    .carousel{
+        
+    }
+    
+    .dots {
+        background-color: black;
+        height: 20px;
+        color: blueviolet;
+
+        li {
+            background-color: #ff0000;
+        }
+    }
+`
+
 
 const CarouselOfCustomersSay: React.FC = () => {
   const onChange = (currentSlide: number) => {
@@ -16,20 +34,30 @@ const CarouselOfCustomersSay: React.FC = () => {
   };
 
   return (
-    <Carousel afterChange={onChange}>
+
+
+      <Container>
+
+
+          <h2><span>Customers</span> Say</h2>
+
+    <Carousel className={'carousel'} dots={{className:'dots'}} afterChange={onChange}>
+
+
       <div>
-        <h3 style={contentStyle}>1</h3>
+        <h3 style={contentStyle}><CustomersSaysTab/> </h3>
+
       </div>
       <div>
-        <h3 style={contentStyle}>2</h3>
+        <h3 style={contentStyle}><CustomersSaysTab/></h3>
       </div>
       <div>
-        <h3 style={contentStyle}>3</h3>
+        <h3 style={contentStyle}><CustomersSaysTab/></h3>
       </div>
-      <div>
-        <h3 style={contentStyle}>4</h3>
-      </div>
+
     </Carousel>
+
+      </Container>
   );
 };
 
