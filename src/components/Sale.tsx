@@ -11,21 +11,6 @@ display: flex;
     background-image: url(/sale-bg.svg);
     background-repeat: no-repeat;
     
-    //.input {
-    //    width: 440px;
-    //    height:70px;
-    //}
-    
-    //:after {
-    //    content: "";
-    //    position: absolute;
-    //    top: 30%;
-    //    right: 5%;
-    //    width: 274px;
-    //    height: 276px;
-    //    background: url(/FoodImage.svg) top center no-repeat;
-    //    background-size: cover;
-    //}
     
 `
 

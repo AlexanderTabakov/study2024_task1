@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled , {css} from "styled-components";
 import { FaRegHeart } from "react-icons/fa";
 import { TiStarFullOutline } from "react-icons/ti";
 import { IRestCardProps } from "ui/RestaurantCard";
+import {textTitle} from "components/Description";
 
 interface IDishCardProps extends IRestCardProps {
   price: number;
@@ -43,6 +44,7 @@ const Container = styled.div`
 const Description = styled.div`
   display: flex;
   flex-direction: column;
+
   .markedBy {
     border: salmon;
     border-radius: 5px;
@@ -50,6 +52,7 @@ const Description = styled.div`
     width: 65px;
     padding: 5px;
   }
+
   .rating {
     display: flex;
     flex-direction: row;
@@ -61,13 +64,58 @@ const Description = styled.div`
     display: flex;
     flex-direction: column;
   }
+  
+  .titleText{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 23px;
+    color: #323142;
+    margin: 0 0 3px;
+  }
+  
+  span, p {
+    font-family: "Manrope", sans-serif;
+    font-size: 17px;
+    color: #8E97A6;
+    margin-right: 30px;
+  }
+
+  .green {
+    border-radius: 3px;
+    padding: 5px;
+    background-color: #72e7a1;
+    width: fit-content;
+    color: #309d5c;
+  }
+
+  .red {
+    border-radius: 3px;
+    padding: 2px;
+    background-color: #f7c5ba;
+    width: fit-content;
+    color: #fb461d;;
+  }
+
+  .yellow {
+    border-radius: 3px;
+    padding: 2px;
+    background-color: #f7edd0;
+    width: fit-content;
+    color: #daa41a;
+  }
 `;
 
 const PriceAndAddToCard = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  button {
+  span {
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #323142;
+  }
+  .btn {
     border-radius: 5px;
     background-color: #323142;
     color: white;
@@ -75,7 +123,10 @@ const PriceAndAddToCard = styled.div`
     width: 43px;
     height: 39px;
     font-size: 2em;
-  }
+  } &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+    }
 `;
 
 const DishCard: React.FC<IDishCardProps> = ({
@@ -86,7 +137,7 @@ const DishCard: React.FC<IDishCardProps> = ({
   name,
   time,
 }) => {
-  const [color, setColor] = useState("green");
+
 
   const handleColor = (dish: any) => {
     if (markedBy === "Healthy") {
@@ -108,19 +159,21 @@ const DishCard: React.FC<IDishCardProps> = ({
       <Description>
         <div className={"textAndRating"}>
           <div className={handleColor(markedBy)}>{markedBy}</div>
-          <p>{name}</p>
+
+          <p className={'titleText'}>{name}</p>
+
+
         </div>
         <div className={"rating"}>
-          {" "}
-          <p>{time} min</p> <TiStarFullOutline /> <p>{rating}</p>{" "}
+          <p>{time} min</p> <TiStarFullOutline style={{color:'gold'}} /> <span>{rating}</span>
         </div>
       </Description>
 
       <PriceAndAddToCard>
         <div>
-          <span>$</span> <span>{price}</span>{" "}
+          <span>$</span> <span>{price}</span>
         </div>
-        <button>+</button>
+        <button className={'btn'}>+</button>
       </PriceAndAddToCard>
     </Container>
   );

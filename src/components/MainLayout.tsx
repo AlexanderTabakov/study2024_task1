@@ -7,10 +7,18 @@ import MobileApp from "components/MobileApp";
 import TopRestaurantsLayout from "components/TopRestaurantsLayout";
 import DishesLayout from "components/DishesLayout";
 import CarouselOfCustomersSay from "components/Carousel";
-import DishTag from "ui/DishTag";
 import ControlPurchasesLayout from "components/ControlPurchasesLayout";
-import CustomersSaysTab from "ui/CustomersSaysTab";
 import Sale from "components/Sale";
+import styled from "styled-components";
+
+const Container = styled.main`
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 50px 10px 50px;
+    
+`
 
 const MainLayout = () => {
   const { getData, loading, hasErrors } = useStore();
@@ -24,26 +32,20 @@ const MainLayout = () => {
   }
 
   return (
-    <>
 
+        <Container>
+      {/*<Description />*/}
+      {/*      <Features />*/}
+      {/*<MobileApp />*/}
 
-      <ControlPurchasesLayout/>
+      {/*<TopRestaurantsLayout />*/}
+      {/*<DishesLayout />*/}
 
-      <Description />
-      <Features />
-      <MobileApp />
-      <TopRestaurantsLayout />
-      <DishesLayout />
+        {/*<ControlPurchasesLayout/>*/}
       <CarouselOfCustomersSay />
-        <Sale/>
+      {/*  <Sale/>*/}
+        </Container>
 
-
-
-
-
-
-
-    </>
   );
 };
 

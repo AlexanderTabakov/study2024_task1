@@ -6,7 +6,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 const MobileStyle = styled.section`
   display: flex;
   height: 900px;
-  border: darkblue solid;
+  
 
   width: 100vw;
   .mobile {
@@ -15,12 +15,30 @@ const MobileStyle = styled.section`
     background-repeat: no-repeat;
     background-position: center;
   }
+    
+    li{
+        list-style: initial;
+        font-family: "Inter", sans-serif;
+        font-size: 20px;
+        line-height: 1.5;
+        color: #606060;
+        margin-bottom: 50px;
+    }
+    
+    .title{
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 45px;
+        text-align: center;
+        color: #323142;
+        margin-bottom: 50px;
+    }
 
   .description {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+      justify-content: center;
+    align-items: flex-start;
   }
 `;
 
@@ -30,7 +48,7 @@ const MobileApp = () => {
       <div className={"mobile"}></div>
 
       <div className={"description"}>
-        <h2>
+        <h2 className={'title'}>
           Premium <span>Quality</span> For Your Health
         </h2>
         <li>
@@ -47,6 +65,10 @@ const MobileApp = () => {
             backgroundColor: "#6C5FBC",
             display: "flex",
             alignItems: "center",
+              justifyContent: "center",
+              color: "white",
+              width: "186px",
+              height: "70px",
           }}
         >
           {" "}

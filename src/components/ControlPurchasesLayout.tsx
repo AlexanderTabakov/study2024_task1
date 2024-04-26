@@ -1,14 +1,14 @@
 import React from 'react';
-import styled from "styled-components";
+import styled , {css} from "styled-components";
 import { Select, Space } from 'antd';
-import value from "*.png";
 import DishTag from "ui/DishTag";
+import {textTitle, title} from "components/Description";
 
 const Container = styled.section`
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;    
-    column-gap: 10px;
+    column-gap: 5vw;
+    align-items: flex-start;
     padding-top: 100px;
     padding-bottom: 120px;
     border-bottom: 1px solid #cbcbcb
@@ -17,6 +17,15 @@ const Container = styled.section`
 `
 
 const Dashboard = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    .title {
+        ${title};
+        font-size: 50px;
+        word-wrap: break-word;
+    }
 
 `
 
@@ -34,6 +43,12 @@ const Purchases = styled.div`
     .purchasesAndSelect{
         display: flex;
         flex-direction: row;
+        align-items: baseline;
+        
+        h3 {
+            ${textTitle};
+            color:black
+        }
         
 }
         
@@ -45,6 +60,7 @@ const TabsContainer = styled.div`
     display: flex;
     flex-direction: column;
     column-gap: 10px;
+    gap: 10px;
     
     .tab1 {
         width: 460px;
@@ -66,6 +82,8 @@ const ControlPurchasesLayout = () => {
 
             <Dashboard>
 
+                <h3 className={'title'}>Control <span style={{color:'#6c5fbc;'}}>Purchases</span> Via <br/> Dashboard </h3>
+
                 <DishTag image={'https://live.staticflickr.com/65535/53673278223_e929358404_n.jpg'} dishName={'Chicken King'} delivery={'On The Way'} time={'3.09 PM'} />
                 <DishTag dishName={'Chicken Hell'} time={'3.09 PM'} image={'https://live.staticflickr.com/65535/53673278223_e929358404_n.jpg'} delivery={'On The Way'} />
                 <DishTag dishName={'Chicken Hell'} time={'3.09 PM'} image={'https://live.staticflickr.com/65535/53673278223_e929358404_n.jpg'} delivery={'On The Way'} />
@@ -81,8 +99,6 @@ const ControlPurchasesLayout = () => {
                    <div><h3>Purchases</h3></div>
 
 
-                   <div>
-
                    <Select defaultValue="This Month"
 
                            style={{ width: 120 }} options={[
@@ -90,7 +106,7 @@ const ControlPurchasesLayout = () => {
                        { value: 'This Month', label: 'This Month' },
                        { value: 'This Year', label: 'This Year' },
                    ]}  />
-                   </div>
+
 
                </div>
 
