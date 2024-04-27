@@ -4,23 +4,46 @@ import styled from "styled-components";
 const Container = styled.footer`
   display: flex;
   flex-direction: column;
+  padding: 80px 0 40px;
+  background-color: #eaeaea;
+  margin-top: auto;
 `;
 
 const Nav = styled.nav`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
-  div {
+  nav{
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #606060;
+    transition: color 0.2s ease;
+  } &:hover{
+      cursor: pointer;
+      color: #6c5fbc;
+    }
+
+  .navBarMenu {
     display: flex;
     flex-direction: row;
     gap: 70px;
+  }
+  
+  @media (max-width: 720px) {
+     
+         .navBar {
+           flex-direction: column;
+         }
+    
   }
 `;
 
 const NavBar = styled.div`
   display: flex;
   justify-content: space-between;
-  border-bottom: gray solid;
+  border-bottom: 1px solid #cbcbcb;
 `;
 
 const SocialMedia = styled.div`
@@ -32,13 +55,20 @@ const SocialMedia = styled.div`
     flex-direction: row;
     gap: 20px;
   }
+  
+  p{
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: #999999;
+  }
 `;
 
 const Footer = () => {
   return (
     <Container>
       <NavBar>
-        <nav> Картинка EaTLY</nav>
+        <nav><img src="/Logo.svg" alt=""/></nav>
         <Nav>
           <div>
             <nav>Menu</nav>
@@ -51,18 +81,18 @@ const Footer = () => {
 
       <SocialMedia>
         <p>© 2023 EATLY All Rights Reserved.</p>
-        <div>
+        <div className={'navBarMenu'}>
           <nav>
-            <a href=""></a> Картинка инсты
+            <a href=""><img src="/LogoInst.svg" alt=""/></a>
           </nav>
           <nav>
-            <a href=""></a> Картинка ЛинкдИН
+            <a href=""><img src="/LogoLInk.svg" alt=""/></a>
           </nav>
           <nav>
-            <a href=""></a> Картинка фейсбук
+            <a href=""><img src="/LogoFB.svg" alt=""/></a>
           </nav>
           <nav>
-            <a href=""></a> Картинка твитера
+            <a href=""><img src="/LogoTwit.svg" alt=""/></a>
           </nav>
         </div>
       </SocialMedia>

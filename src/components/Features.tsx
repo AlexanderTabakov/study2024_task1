@@ -8,6 +8,7 @@ const FeaturesStyle = styled.section`
   align-items: center;
   justify-content: center;
     border-bottom: 1px solid #cbcbcb;
+    flex-wrap: wrap;
 
   background-image: url(/BGFeatures.svg);
   .block {

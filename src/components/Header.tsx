@@ -5,14 +5,28 @@ import Auth from "components/Auth";
 const Container = styled.header`
   position: sticky;
   display: flex;
-  justify-content: space-between;
-  border-bottom: darkblue solid;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid #cbcbcb;
+  
+  
+  nav{
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #606060;
+    transition: color 0.2s ease;
+  } &:hover{
+  cursor: pointer;
+  color: #6c5fbc;
+   }
 `;
 
 const NavBar = styled.nav`
   display: flex;
   flex-direction: row;
   gap: 55px;
+  align-items: center;
 `;
 
 const LoginAndSignUp = styled.div`
@@ -25,7 +39,7 @@ const Header = () => {
     <header>
       <Container>
         <NavBar>
-          <nav> Картинка EaTLY </nav>
+          <nav><img src="/Logo.svg" alt=""/> </nav>
           <nav>Menu</nav>
           <nav>Blog</nav>
           <nav>Pricing</nav>

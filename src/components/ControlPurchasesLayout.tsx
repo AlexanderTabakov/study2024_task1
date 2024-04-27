@@ -11,7 +11,8 @@ const Container = styled.section`
     align-items: flex-start;
     padding-top: 100px;
     padding-bottom: 120px;
-    border-bottom: 1px solid #cbcbcb
+    border-bottom: 1px solid #cbcbcb;
+    flex-wrap: wrap;
     
     //-moz-column-gap: 10px;
 `
@@ -82,7 +83,7 @@ const ControlPurchasesLayout = () => {
 
             <Dashboard>
 
-                <h3 className={'title'}>Control <span style={{color:'#6c5fbc;'}}>Purchases</span> Via <br/> Dashboard </h3>
+                <h3 className={'title'}>Control <span style={{color:'#6c5fbc'}}>Purchases</span> Via <br/> Dashboard </h3>
 
                 <DishTag image={'https://live.staticflickr.com/65535/53673278223_e929358404_n.jpg'} dishName={'Chicken King'} delivery={'On The Way'} time={'3.09 PM'} />
                 <DishTag dishName={'Chicken Hell'} time={'3.09 PM'} image={'https://live.staticflickr.com/65535/53673278223_e929358404_n.jpg'} delivery={'On The Way'} />

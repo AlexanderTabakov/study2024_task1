@@ -5,11 +5,18 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 const MobileStyle = styled.section`
   display: flex;
+    position: relative;
   height: 900px;
+    flex-wrap: wrap;
+    
+    @media screen  {
+        
+    }
   
 
   width: 100vw;
   .mobile {
+      height: 100%;
     width: 50%;
     background-image: url(/Mobile.svg);
     background-repeat: no-repeat;
@@ -36,6 +43,7 @@ const MobileStyle = styled.section`
 
   .description {
     display: flex;
+      width: 50%;
     flex-direction: column;
       justify-content: center;
     align-items: flex-start;

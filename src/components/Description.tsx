@@ -8,6 +8,8 @@ import {Button} from "antd";
 const Container = styled.section`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 export const title = css `

@@ -9,30 +9,36 @@ type FieldType = {
   remember?: string;
 };
 
-const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
-  console.log("Success:", values);
-};
-
-const onFinishFailed: FormProps<FieldType>["onFinishFailed"] = (errorInfo) => {
-  console.log("Failed:", errorInfo);
-};
 
 const InputStyle = styled.div`
   display: flex;
   padding: 20px;
   align-items: center;
   .input {
-    width: 382px;
+    width: 400px;
+    height: 80px;
     margin-left: auto;
-    margin-right: auto;
-    height: 75px;
+    margin-right: auto;    
     color: #6c5fbc;
   }
 
   .btn {
-    width: 382px;
-    height: 75px;
+    width: 400px;
+    height: 80px;
     background-color: #6c5fbc;
+  }
+  
+  @media (max-width: 720px) {
+  {
+    height: 200px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+  }
+    .input , .btn {
+      width: 300px;
+      height: 25%;
+    }
   }
 
   span {
@@ -50,8 +56,7 @@ const InputValidate: React.FC = () => (
       wrapperCol={{ span: 16 }}
       style={{ maxWidth: 600 }}
       initialValues={{ remember: true }}
-      onFinish={onFinish}
-      onFinishFailed={onFinishFailed}
+
       autoComplete="off"
     >
       <Form.Item<FieldType>

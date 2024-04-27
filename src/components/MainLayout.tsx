@@ -6,10 +6,11 @@ import Features from "components/Features";
 import MobileApp from "components/MobileApp";
 import TopRestaurantsLayout from "components/TopRestaurantsLayout";
 import DishesLayout from "components/DishesLayout";
-import CarouselOfCustomersSay from "components/Carousel";
+import CarouselOfCustomersSay from "components/CarouselOfCustomersSay";
 import ControlPurchasesLayout from "components/ControlPurchasesLayout";
 import Sale from "components/Sale";
 import styled from "styled-components";
+import carouselOfCustomersSay from "components/CarouselOfCustomersSay";
 
 const Container = styled.main`
 
@@ -17,6 +18,7 @@ const Container = styled.main`
     flex-direction: column;
     align-items: center;
     padding: 10px 50px 10px 50px;
+    min-height: 100vh;
     
 `
 
@@ -34,16 +36,16 @@ const MainLayout = () => {
   return (
 
         <Container>
-      {/*<Description />*/}
-      {/*      <Features />*/}
-      {/*<MobileApp />*/}
+      <Description />
+            <Features />
+      <MobileApp />
 
-      {/*<TopRestaurantsLayout />*/}
-      {/*<DishesLayout />*/}
+      <TopRestaurantsLayout />
+      <DishesLayout />
 
-        {/*<ControlPurchasesLayout/>*/}
+        <ControlPurchasesLayout/>
       <CarouselOfCustomersSay />
-      {/*  <Sale/>*/}
+        <Sale/>
         </Container>
 
   );

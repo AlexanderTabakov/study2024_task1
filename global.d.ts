@@ -1,5 +1,6 @@
 declare module "*.png";
 declare module "*.jpg";
+declare module 'react-slick'
 declare module "*.png" {
   const value: any;
   export = value;

@@ -8,8 +8,10 @@ import {title} from "components/Description";
 const Layout = styled.section`
   display: flex;
   flex-direction: column;
+    justify-content: center;
   align-items: center;
     position: relative;
+    flex-wrap: wrap;
     
     .title {
         ${title}
@@ -17,7 +19,9 @@ const Layout = styled.section`
 
   .resLayout {
     display: flex;
+      flex-wrap: wrap;
     flex-direction: row;
+      justify-content: center;
   }
 
     .viewAll {

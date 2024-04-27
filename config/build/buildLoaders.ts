@@ -30,6 +30,8 @@ export function buildLoaders({
     ],
   };
 
+
+
   // Если не используем тайпскрипт - нужен babel-loader
   const typescriptLoader = {
     test: /\.tsx?$/,
@@ -41,6 +43,8 @@ export function buildLoaders({
     test: /\.(png|jpe?g|gif|woff2|woff)$/i,
     type: "asset/resource",
   };
+
+
 
   return [fileLoader, svgLoader, typescriptLoader, cssLoader];
 }
