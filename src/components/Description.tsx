@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import Star from "../assets/star.svg";
 import Logo from "../assets/trustpilot.svg";
 import Image from "../assets/Hero.svg";
-import {Button} from "antd";
+import { Button } from "antd";
 
 const Container = styled.section`
   display: flex;
@@ -12,15 +12,15 @@ const Container = styled.section`
   justify-content: center;
 `;
 
-export const title = css `
+export const title = css`
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 75px;
   line-height: 1.2;
   letter-spacing: -3px;
-  color: #201F1F;
+  color: #201f1f;
   margin: 0 0 20px;
-`
+`;
 
 export const textTitle = css`
   display: inline-block;
@@ -33,8 +33,7 @@ export const textTitle = css`
   letter-spacing: 2px;
   color: rgba(32, 31, 31, 0.2);
   margin: 0 0 20px;
-`
-
+`;
 
 const LeftContainer = styled.div`
   width: 568px;
@@ -53,17 +52,17 @@ const LeftContainer = styled.div`
     align-items: center;
     gap: 3px;
   }
-  
-  .title{
+
+  .title {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 75px;
     line-height: 1.2;
     letter-spacing: -3px;
-    color: #201F1F;
+    color: #201f1f;
     margin: 0 0 20px;
   }
-  
+
   .titleText {
     display: inline-block;
     padding-left: 60px;
@@ -76,12 +75,12 @@ const LeftContainer = styled.div`
     color: rgba(32, 31, 31, 0.2);
     margin: 0 0 20px;
   }
-  
+
   .bold {
     color: #6c5fbc;
   }
-  
-  .titleDescription{
+
+  .titleDescription {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -91,7 +90,6 @@ const LeftContainer = styled.div`
     margin: 0 0 55px;
   }
   .btn1 {
-
     width: 250px;
     height: 60px;
     background-color: #6c5fbc;
@@ -101,10 +99,9 @@ const LeftContainer = styled.div`
     font-size: 17px;
     line-height: 1.2;
     margin: 5px;
-    
   }
-  
-  .btn2{
+
+  .btn2 {
     width: 250px;
     height: 60px;
     color: #6c5fbc;
@@ -126,18 +123,18 @@ const Description = () => {
   return (
     <Container>
       <LeftContainer>
-        <p className={'titleText'}>  ---------- OVER 1000 USERS </p>
-        <h1 className={'title'}>
-          Enjoy Foods All Over The <span className={'bold'}>World</span>
+        <p className={"titleText"}> ---------- OVER 1000 USERS </p>
+        <h1 className={"title"}>
+          Enjoy Foods All Over The <span className={"bold"}>World</span>
         </h1>
-        <p className={'titleDescription'}>
+        <p className={"titleDescription"}>
           EatLy help you set saving goals, earn cash back offers, Go to
           disclaimer for more details and get paychecks up to two days early.
           Get a $20 bonus.
         </p>
         <div>
-          <Button className={'btn1'}>Get Started</Button>
-          <Button className={'btn2'}>Go Pro</Button>
+          <Button className={"btn1"}>Get Started</Button>
+          <Button className={"btn2"}>Go Pro</Button>
         </div>
         <div className={"logoAndRating"}>
           <Logo />

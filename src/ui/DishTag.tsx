@@ -1,14 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-
 interface IDishTagProps {
-  image?:string,
-  dishName?:string,
-  delivery?:string,
-  time?:string
+  image?: string;
+  dishName?: string;
+  delivery?: string;
+  time?: string;
 }
-
 
 const Container = styled.div`
     position: relative;
@@ -53,24 +51,28 @@ const Container = styled.div`
         margin: 0 0 5px;
     }
     
-`
+`;
 
-const DishTag: React.FC<IDishTagProps> = ({image, delivery, time, dishName}) => {
+const DishTag: React.FC<IDishTagProps> = ({
+  image,
+  delivery,
+  time,
+  dishName,
+}) => {
   return (
-
-      <Container>
-
-        <div>
-          <img className={'img'} src={image} alt="tag"/>
-        </div>
-        <div>
-          <h3 className={'titleText'}>{dishName}</h3>
-            <div className={'deliveryText'}>{delivery}</div>
-        </div>
-        <div className={'time'}> <p>{time}</p></div>
-
-
-      </Container>
+    <Container>
+      <div>
+        <img className={"img"} src={image} alt="tag" />
+      </div>
+      <div>
+        <h3 className={"titleText"}>{dishName}</h3>
+        <div className={"deliveryText"}>{delivery}</div>
+      </div>
+      <div className={"time"}>
+        {" "}
+        <p>{time}</p>
+      </div>
+    </Container>
   );
 };
 

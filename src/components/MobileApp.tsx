@@ -5,47 +5,45 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 const MobileStyle = styled.section`
   display: flex;
-    position: relative;
+  position: relative;
   height: 900px;
-    flex-wrap: wrap;
-    
-    @media screen  {
-        
-    }
-  
+  flex-wrap: wrap;
+
+  @media screen {
+  }
 
   width: 100vw;
   .mobile {
-      height: 100%;
+    height: 100%;
     width: 50%;
     background-image: url(/Mobile.svg);
     background-repeat: no-repeat;
     background-position: center;
   }
-    
-    li{
-        list-style: initial;
-        font-family: "Inter", sans-serif;
-        font-size: 20px;
-        line-height: 1.5;
-        color: #606060;
-        margin-bottom: 50px;
-    }
-    
-    .title{
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-size: 45px;
-        text-align: center;
-        color: #323142;
-        margin-bottom: 50px;
-    }
+
+  li {
+    list-style: initial;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #606060;
+    margin-bottom: 50px;
+  }
+
+  .title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 45px;
+    text-align: center;
+    color: #323142;
+    margin-bottom: 50px;
+  }
 
   .description {
     display: flex;
-      width: 50%;
+    width: 50%;
     flex-direction: column;
-      justify-content: center;
+    justify-content: center;
     align-items: flex-start;
   }
 `;
@@ -56,7 +54,7 @@ const MobileApp = () => {
       <div className={"mobile"}></div>
 
       <div className={"description"}>
-        <h2 className={'title'}>
+        <h2 className={"title"}>
           Premium <span>Quality</span> For Your Health
         </h2>
         <li>
@@ -73,10 +71,10 @@ const MobileApp = () => {
             backgroundColor: "#6C5FBC",
             display: "flex",
             alignItems: "center",
-              justifyContent: "center",
-              color: "white",
-              width: "186px",
-              height: "70px",
+            justifyContent: "center",
+            color: "white",
+            width: "186px",
+            height: "70px",
           }}
         >
           {" "}

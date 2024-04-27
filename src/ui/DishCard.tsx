@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import styled , {css} from "styled-components";
+import React from "react";
+import styled, { css } from "styled-components";
 import { FaRegHeart } from "react-icons/fa";
 import { TiStarFullOutline } from "react-icons/ti";
 import { IRestCardProps } from "ui/RestaurantCard";
-import {textTitle} from "components/Description";
 
 interface IDishCardProps extends IRestCardProps {
   price: number;
@@ -19,7 +18,6 @@ const Container = styled.div`
   padding: 20px;
   position: relative;
   box-shadow: 0 20px 30px rgba(70, 70, 70, 0.1);
-
 
   &:hover {
     transform: scale(110%);
@@ -64,19 +62,20 @@ const Description = styled.div`
     display: flex;
     flex-direction: column;
   }
-  
-  .titleText{
+
+  .titleText {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 23px;
     color: #323142;
     margin: 0 0 3px;
   }
-  
-  span, p {
+
+  span,
+  p {
     font-family: "Manrope", sans-serif;
     font-size: 17px;
-    color: #8E97A6;
+    color: #8e97a6;
     margin-right: 30px;
   }
 
@@ -93,7 +92,7 @@ const Description = styled.div`
     padding: 2px;
     background-color: #f7c5ba;
     width: fit-content;
-    color: #fb461d;;
+    color: #fb461d;
   }
 
   .yellow {
@@ -123,10 +122,11 @@ const PriceAndAddToCard = styled.div`
     width: 43px;
     height: 39px;
     font-size: 2em;
-  } &:hover {
-        cursor: pointer;
-        transform: scale(1.05);
-    }
+  }
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
 `;
 
 const DishCard: React.FC<IDishCardProps> = ({
@@ -137,8 +137,6 @@ const DishCard: React.FC<IDishCardProps> = ({
   name,
   time,
 }) => {
-
-
   const handleColor = (dish: any) => {
     if (markedBy === "Healthy") {
       return "yellow";
@@ -160,12 +158,11 @@ const DishCard: React.FC<IDishCardProps> = ({
         <div className={"textAndRating"}>
           <div className={handleColor(markedBy)}>{markedBy}</div>
 
-          <p className={'titleText'}>{name}</p>
-
-
+          <p className={"titleText"}>{name}</p>
         </div>
         <div className={"rating"}>
-          <p>{time} min</p> <TiStarFullOutline style={{color:'gold'}} /> <span>{rating}</span>
+          <p>{time} min</p> <TiStarFullOutline style={{ color: "gold" }} />{" "}
+          <span>{rating}</span>
         </div>
       </Description>
 
@@ -173,7 +170,7 @@ const DishCard: React.FC<IDishCardProps> = ({
         <div>
           <span>$</span> <span>{price}</span>
         </div>
-        <button className={'btn'}>+</button>
+        <button className={"btn"}>+</button>
       </PriceAndAddToCard>
     </Container>
   );

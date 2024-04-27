@@ -10,17 +10,15 @@ import CarouselOfCustomersSay from "components/CarouselOfCustomersSay";
 import ControlPurchasesLayout from "components/ControlPurchasesLayout";
 import Sale from "components/Sale";
 import styled from "styled-components";
-import carouselOfCustomersSay from "components/CarouselOfCustomersSay";
 
 const Container = styled.main`
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 50px 10px 50px;
-    min-height: 100vh;
-    
-`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 50px 10px 50px;
+  min-height: 100vh;
+  margin-top: 10px;
+`;
 
 const MainLayout = () => {
   const { getData, loading, hasErrors } = useStore();
@@ -33,21 +31,23 @@ const MainLayout = () => {
     return <Spin />;
   }
 
-  return (
+  if (hasErrors) {
+    return <div>Error!</div>;
+  }
 
-        <Container>
+  return (
+    <Container>
       <Description />
-            <Features />
+      <Features />
       <MobileApp />
 
       <TopRestaurantsLayout />
       <DishesLayout />
 
-        <ControlPurchasesLayout/>
+      <ControlPurchasesLayout />
       <CarouselOfCustomersSay />
-        <Sale/>
-        </Container>
-
+      <Sale />
+    </Container>
   );
 };
 

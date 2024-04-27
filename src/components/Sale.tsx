@@ -1,8 +1,6 @@
-import React from 'react';
-import styled, {css} from "styled-components";
-import {Button, Input} from "antd";
-import {title} from "components/Description";
-
+import React from "react";
+import styled from "styled-components";
+import { Button, Input } from "antd";
 
 const Container = styled.section`
 display: flex;
@@ -48,77 +46,68 @@ display: flex;
     }
     
     
-`
+`;
 
 const TitleAndInput = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+`;
 
 const InputContainer = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  .input {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 440px;
+    height: 70px;
+    background-color: #6c5fbc;
+  }
 
+  .btn {
+    width: 133px;
+    height: 54px;
+    position: absolute;
+    right: 20px;
+    border-radius: 15px;
+    background: #8a79ee;
+    border-color: #6c5fbc;
+    color: white;
+  }
 
+  @media (max-width: 1000px) {
     .input {
-        position: relative;
-        width: 440px;
-        height: 70px;
-        background-color: #6c5fbc;
+      width: 50vw;
     }
 
     .btn {
-        width: 133px;
-        height: 54px;
-        position: absolute;
-        right: 20px;
-        border-radius: 15px;
-        background: #8a79ee;
-        border-color: #6c5fbc;;
-        color: white;
-
+      width: 15vw;
+      font-size: 2vw;
     }
-
-    @media (max-width: 1000px) {
-        
-
-        .input {
-            width: 50vw;
-        }
-        
-        .btn {
-            width: 15vw;
-            font-size: 2vw ;
-        }
-    }
-
-`
+  }
+`;
 
 const Sale = () => {
-    return (
-        <Container>
+  return (
+    <Container>
+      <TitleAndInput>
+        <h2 className={"titleSale"}>GET 50%</h2>
 
-            <TitleAndInput>
+        <InputContainer>
+          <Input className={"input"} placeholder="Enter Your Email" />
+          <Button className={"btn"}>SUBSCRIBE</Button>
+        </InputContainer>
+      </TitleAndInput>
 
-            <h2 className={'titleSale'}>GET 50%</h2>
-
-    <InputContainer>
-        <Input className={'input'} placeholder="Enter Your Email"/>
-        <Button className={'btn'}>SUBSCRIBE</Button>
-    </InputContainer>
-        </TitleAndInput>
-
-            <div>
-                <img className={'img'} src="/FoodImage.svg" alt="foodImage"/>
-            </div>
-
-        </Container>
-    );
+      <div>
+        <img className={"img"} src="/FoodImage.svg" alt="foodImage" />
+      </div>
+    </Container>
+  );
 };
 
 export default Sale;

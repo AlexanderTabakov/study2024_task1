@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Button, Modal } from "antd";
 import InputValidate from "ui/InputValidate";
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 // import Test from "../assets/productAuth.svg";
 import Logo from "../assets/Logo.svg";
 import GoogleBtn from "../assets/Google Button.svg";
 import AppleBtn from "../assets/Apple Button.svg";
-import {textTitle, title} from "components/Description";
+import { textTitle, title } from "components/Description";
 
 const Container = styled.aside`
   display: flex;
@@ -14,14 +14,14 @@ const Container = styled.aside`
   //justify-content: space-between;
   //align-items: center;
   position: relative;
-  
+
   @media (max-width: 720px) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
   }
-  
+
   height: 80vh;
   width: 90vw;
   padding: 0;
@@ -33,11 +33,10 @@ const Container = styled.aside`
     width: fit-content;
     height: 100%;
   }
-  
-  .btn1{
+
+  .btn1 {
     background-color: white;
   }
-  
 `;
 
 const AuthSide = styled.div`
@@ -47,7 +46,7 @@ const AuthSide = styled.div`
   flex-direction: column;
   align-items: center;
   //justify-content: space-around;
-  
+
   .authTitle {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
@@ -92,11 +91,9 @@ const ImageSide = styled.div`
   background-image: url(/productAuth.svg);
   background-repeat: no-repeat;
   background-position: center top;
-  
+
   @media (max-width: 720px) {
-    
-      display: none;
-    
+    display: none;
   }
 
   .image {
@@ -109,15 +106,15 @@ const ImageSide = styled.div`
     margin-left: auto;
     right: 10%;
   }
-  
+
   .title {
     ${title};
     color: white;
   }
-  
+
   .titleText {
     ${textTitle};
-    color:white;
+    color: white;
   }
 
   .description {
@@ -143,13 +140,28 @@ const Auth: React.FC = () => {
 
   return (
     <>
-      <Button style={{backgroundColor:'#6c5fbc'}} className={'btn1'} type="primary" onClick={showModal}>
+      <Button
+        style={{ backgroundColor: "#6c5fbc" }}
+        className={"btn1"}
+        type="primary"
+        onClick={showModal}
+      >
         Sign In
       </Button>
-      <Button style={{backgroundColor:'white', color:'#6c5fbc'}} className={'brn2'} type="primary" onClick={showModal}>
+      <Button
+        style={{ backgroundColor: "white", color: "#6c5fbc" }}
+        className={"brn2"}
+        type="primary"
+        onClick={showModal}
+      >
         Sign Up
       </Button>
-      <Modal style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}
+      <Modal
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
         className={"modal"}
         open={isModalOpen}
         // open={true}
@@ -160,11 +172,10 @@ const Auth: React.FC = () => {
       >
         <Container>
           <AuthSide>
-
             <Logo className={"logo"} />
 
             <div>
-              <h2 className={'authTitle'}>Sign In To Eatly</h2>
+              <h2 className={"authTitle"}>Sign In To Eatly</h2>
             </div>
 
             <div className={"authByGoolgeAndApple"}>
@@ -180,12 +191,10 @@ const Auth: React.FC = () => {
           </AuthSide>
 
           <ImageSide>
-
-
             <div className={"description"}>
-              <h2 className={'title'}>Find Foods With Love </h2>
+              <h2 className={"title"}>Find Foods With Love </h2>
 
-              <h3 className={'titleText'}>
+              <h3 className={"titleText"}>
                 Eatly Is The Food Delivery Dashboard And Having More Than 2K+
                 Dishes Including Asian, Chinese, Italians And Many More. Our
                 Dashboard Helps You To Manage Orders And Money.

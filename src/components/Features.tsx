@@ -37,18 +37,30 @@ const Features = () => {
   return (
     <FeaturesStyle>
       <div className={"block"}>
-        <h2 className={'title'}>10K+</h2>
-        <div><p className={'titleText'}>Satisfied Costumers All Great Over The World</p></div>
+        <h2 className={"title"}>10K+</h2>
+        <div>
+          <p className={"titleText"}>
+            Satisfied Costumers All Great Over The World
+          </p>
+        </div>
       </div>
 
       <div className={"block"}>
-        <h2 className={'title'} >4M</h2>
-        <div><p className={'titleText'}>Healthy Dishes Solid Including Milk Shakes Smooth</p></div>
+        <h2 className={"title"}>4M</h2>
+        <div>
+          <p className={"titleText"}>
+            Healthy Dishes Solid Including Milk Shakes Smooth
+          </p>
+        </div>
       </div>
 
       <div className={"block"}>
-        <h2 className={'title'}>99.99%</h2>
-        <div><p className={'titleText'}>Reliable Customer Support We Provide Great Experiences</p></div>
+        <h2 className={"title"}>99.99%</h2>
+        <div>
+          <p className={"titleText"}>
+            Reliable Customer Support We Provide Great Experiences
+          </p>
+        </div>
       </div>
     </FeaturesStyle>
   );

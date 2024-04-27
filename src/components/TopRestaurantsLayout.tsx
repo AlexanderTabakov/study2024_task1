@@ -1,39 +1,39 @@
 import React from "react";
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 import RestaurantCard from "ui/RestaurantCard";
 import useStore from "store";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import {title} from "components/Description";
+import { title } from "components/Description";
 
 const Layout = styled.section`
   display: flex;
   flex-direction: column;
-    justify-content: center;
+  justify-content: center;
   align-items: center;
-    position: relative;
-    flex-wrap: wrap;
-    
-    .title {
-        ${title}
-    }
+  position: relative;
+  flex-wrap: wrap;
+
+  .title {
+    ${title}
+  }
 
   .resLayout {
     display: flex;
-      flex-wrap: wrap;
+    flex-wrap: wrap;
     flex-direction: row;
-      justify-content: center;
+    justify-content: center;
   }
 
-    .viewAll {
-        padding-top: 20px;
-        position: absolute;
-        bottom: -10px;
-        right: 5px;
-        &:hover {
-            cursor: pointer;
-            transform: scale(110%);
-        }
+  .viewAll {
+    padding-top: 20px;
+    position: absolute;
+    bottom: -10px;
+    right: 5px;
+    &:hover {
+      cursor: pointer;
+      transform: scale(110%);
     }
+  }
 `;
 
 const TopRestaurantsLayout = () => {
@@ -41,8 +41,8 @@ const TopRestaurantsLayout = () => {
 
   return (
     <Layout>
-      <h2 className={'title'}>
-        Our Top <span style={{color:'#6c5fbc'}}>Restaurants</span>
+      <h2 className={"title"}>
+        Our Top <span style={{ color: "#6c5fbc" }}>Restaurants</span>
       </h2>
       <div className={"resLayout"}>
         {restaraunts.map((res: any) => (
@@ -56,7 +56,7 @@ const TopRestaurantsLayout = () => {
           />
         ))}
       </div>
-      <p className={'viewAll'}>
+      <p className={"viewAll"}>
         View All <FaLongArrowAltRight />{" "}
       </p>
     </Layout>

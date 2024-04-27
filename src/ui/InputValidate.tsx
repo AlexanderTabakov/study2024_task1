@@ -1,5 +1,4 @@
 import React from "react";
-import type { FormProps } from "antd";
 import { Button, Form, Input } from "antd";
 import styled from "styled-components";
 
@@ -8,7 +7,6 @@ type FieldType = {
   password?: string;
   remember?: string;
 };
-
 
 const InputStyle = styled.div`
   display: flex;
@@ -56,11 +54,10 @@ const InputValidate: React.FC = () => (
       wrapperCol={{ span: 16 }}
       style={{ maxWidth: 600 }}
       initialValues={{ remember: true }}
-
       autoComplete="off"
     >
       <Form.Item<FieldType>
-        name="username"
+        name="remember"
         rules={[{ required: true, message: "Please input your Full Name!" }]}
       >
         <Input placeholder={"Full Name"} className={"input"} />
