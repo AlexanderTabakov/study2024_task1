@@ -15,11 +15,15 @@ const Container = styled.section`
 export const title = css`
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: 75px;
+  font-size: 4vw;
+  //font-size: 75px;
   line-height: 1.2;
   letter-spacing: -3px;
   color: #201f1f;
   margin: 0 0 20px;
+  @media (max-width: 540px) {
+    font-size: 35px;
+  }
 `;
 
 export const textTitle = css`

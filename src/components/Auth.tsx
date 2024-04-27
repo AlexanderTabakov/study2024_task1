@@ -91,6 +91,7 @@ const ImageSide = styled.div`
   background-image: url(/productAuth.svg);
   background-repeat: no-repeat;
   background-position: center top;
+  //background-size: cover;
 
   @media (max-width: 720px) {
     display: none;

@@ -40,10 +40,8 @@ const MainLayout = () => {
       <Description />
       <Features />
       <MobileApp />
-
       <TopRestaurantsLayout />
       <DishesLayout />
-
       <ControlPurchasesLayout />
       <CarouselOfCustomersSay />
       <Sale />

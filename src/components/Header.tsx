@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Auth from "components/Auth";
+import DropDownMenu from "ui/DropDownMenu";
 
 const Container = styled.header`
   position: fixed;
@@ -11,6 +12,10 @@ const Container = styled.header`
   align-items: center;
   background-color: white;
   border-bottom: 2px solid #cbcbcb;
+
+  @media (max-width: 720px) {
+    justify-content: end;
+  }
 
   nav {
     font-family: "Inter", sans-serif;
@@ -39,6 +44,15 @@ const NavBar = styled.nav`
 const LoginAndSignUp = styled.div`
   display: flex;
   flex-direction: row;
+  .dropDown {
+    display: none;
+  }
+
+  @media (max-width: 720px) {
+    .dropDown {
+      display: block;
+    }
+  }
 `;
 
 const Header = () => {
@@ -57,6 +71,9 @@ const Header = () => {
 
         <LoginAndSignUp>
           <Auth />
+          <div className={"dropDown"}>
+            <DropDownMenu />
+          </div>
         </LoginAndSignUp>
       </Container>
     </header>
